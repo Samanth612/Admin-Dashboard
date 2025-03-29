@@ -49,7 +49,7 @@ const ProductsTable: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(PRODUCT_DATA);
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const term = e.target.value.toLowerCase();
     setSearchTerm(term);
     const filteredData = PRODUCT_DATA?.filter(
